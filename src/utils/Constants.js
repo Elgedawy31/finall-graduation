@@ -1,0 +1,1 @@
+export const APP_URL = 'https://graduation-project-l7us.onrender.com'

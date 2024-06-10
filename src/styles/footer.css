@@ -1,0 +1,62 @@
+footer {
+    background-color: #0F3C4F;
+    padding: 60px;
+    margin-top: 40px;
+    text-align: center;
+    color: white;
+    height: max-content;
+    font-size: 20px;
+    font-family: Josefin Sans;
+    font-weight: bold;
+}
+
+footer span {
+    color: #E1B168;
+}
+
+footer .icons {
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    gap: 10px;
+}
+footer .icons :hover{
+    background-color: #E1B168;
+    font-size: 35px;
+    font-weight: bold;
+}
+footer button:hover{
+    background-color: #E1B168;
+    color: #0F3C4F;
+    
+}
+
+footer input {
+    height: 68px;
+    border: 1px solid #858585;
+    background-color: transparent;
+    width: 60%;
+    outline: none;
+
+
+}
+
+footer button {
+    height: 68px;
+    background-color: white;
+    font-weight: 200;
+    color: #0F3C4F;
+    font-size: 22px;
+    border: none;
+    width: 22%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+}
+
+footer input::placeholder {
+    color: white;
+    padding-left: 8px;
+    font-size: 22px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

@@ -1,0 +1,117 @@
+nav {
+    background-color:  #0f3c4f ;
+    text-align: center;
+    padding-bottom: 10px;
+    height: max-content;
+    text-align: center;
+}
+
+
+.navWords {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+@media (max-width:700px){
+    .navWords{
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+    }
+   
+}
+.navSecondDiv {
+    height: max-content;
+    margin-top: 40px;
+    padding: 20px 0px 20px 300px;
+    border-bottom: 2px solid #7e7e7e;
+    border-top: 1px solid #989898;
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.navWords li {
+    width: fit-content;
+    margin: 0px 20px;
+    list-style-type: none;
+
+}
+
+nav .navWords li .link{
+    color: white;
+    text-decoration: none;
+}
+
+
+nav .navWords li .link:hover {
+    padding: 3px 0px;
+    border-bottom: 1px solid #E1B168;
+    border-top: 1px solid #E1B168;
+
+
+}
+
+nav ul {
+    color: white;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+
+
+nav .reservation-button {
+    background-color: #E1B168;
+    padding: 15px 35px;
+    font-size: 15px;
+
+}
+
+nav .reservation-button:hover {
+    background-color: transparent;
+    border: 1px solid #E1B168;
+    color: white;
+
+}
+
+nav .cart {
+    font-size: 26px;
+    font-weight: 100;
+}
+
+ .callbutton {
+    background-color: transparent;
+    border: 2px solid #E1B168;
+    padding: 10px 20px;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+ .callbutton:hover {
+    background-color: #E1B168;
+    color:#0F3C4F;
+
+}
+
+nav .iconns {
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+}
+
+.blogheader .h1 {
+    color: white;
+    margin: auto;
+    width: max-content;
+    border-top: 2px solid #E1B168;
+    border-bottom: 2px solid #E1B168;
+    padding: 20px;
+}

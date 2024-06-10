@@ -1,0 +1,42 @@
+.contain span {
+    font-weight: bold;
+
+}
+
+.contain {
+    margin: auto;
+    width: 85%;
+    color: #0F3C4F;
+    font-family:Cormorant Infant ;
+
+
+
+}
+
+.contain p {
+    font-size: 15px;
+}
+
+.contain section {
+    gap: 10px;
+    margin-top: 50px;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-around; */
+
+}
+
+.contain section div:first-child {
+
+    text-align: left;
+    width: 350px;
+}
+
+.contain section div:nth-child(2) {
+    margin-left: 50px;
+    width: 70%;
+}
+
+.contain section {
+    display: flex;
+}

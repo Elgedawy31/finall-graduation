@@ -1,0 +1,199 @@
+.imgOne {
+    background-image: url(../images/blog-img1.png);
+    height: 388px;
+    width: 100%;
+
+    background-position: center;
+    text-align: center;
+    background-size: cover;
+    margin: auto;
+
+    /* background-: #292E36B2; */
+}
+
+.container .row .col .img {
+    width: 100%;
+    height: 288px;
+    margin-bottom: 35px;
+}
+
+
+.blogheader {
+    background-color: #0F3C4F;
+    color: aliceblue;
+    width: 100%;
+}
+
+.container .blog-text {
+    text-align: center;
+    margin: auto;
+}
+
+
+
+
+
+.imgOne button {
+    width: 231px;
+    height: 68px;
+    margin-top: 160px;
+
+    padding: 21 65 22 65;
+    background-color: transparent;
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+    border: 2px solid #E1B168;
+
+}
+
+.subTitle2 {
+
+    background-image: url('../images/SubTitle.png');
+    font-size: 20px;
+    color: black;
+    width: 147px;
+    text-align: center;
+}
+
+.grid {
+    text-align: center;
+    height: max-content;
+    width: 70%;
+    position: relative;
+    top: 30px;
+
+    gap: 10px;
+    padding: 40px;
+    margin: 180px auto;
+    border: 3px solid #858585;
+    background-color: #0F3C4F;
+
+}
+
+.grid-main {
+
+    background-color: #4b5d64;
+    width: 100%;
+    height: 739px;
+    text-align: center;
+
+
+}
+
+.grid form {
+    /* display: grid; */
+    width: 60%;
+    height: max-content;
+    gap: 20%;
+    padding: 5%;
+    margin: auto;
+    /* grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        " name name name email email email "
+        " person person timing timing  date date"
+        "submit submit submit  submit submit submit"
+    ; */
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+
+.grid form input {
+    background-color: transparent;
+}
+
+.grid form input::placeholder {
+    color: white;
+    padding-left: 8px;
+    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.grid form .grid-one {
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid form .grid-one div {
+    width: 45%;
+}
+
+
+.grid form .grid-two {
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid form .grid-two input {
+    height: 68px;
+    width: 100%;
+    color: aliceblue;
+    border: 1px solid #858585;
+}
+
+@media (max-width:800px) {
+    .grid form .grid-two {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+
+    .grid form .grid-one {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .grid form .grid-one div {
+        width: 100%;
+    }
+   .grid  form button{
+        width: max-content;
+    }
+
+}
+
+.grid form .grid-one input {
+    width: 100%;
+    height: 68px;
+    color: aliceblue;
+    border: 1px solid #858585;
+}
+
+
+.text {
+    width: 50%;
+    margin: 30px auto;
+    color: white;
+    font-family: "Nova Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+
+
+}
+
+.submit {
+    /* grid-area: submit; */
+    width: 232px;
+    height: 68px;
+    padding: 20 51 20 50;
+    /* gap: 10px; */
+    margin: auto;
+    color: #0F3C4F;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.submit:hover {
+    background-color: #0F3C4F;
+    color: #E1B168;
+}

@@ -1,0 +1,185 @@
+.main-cheif-section .aboutsec {
+    margin: auto;
+    width: max-content;
+    text-align: center;
+}
+
+.main-cheif-section .aboutsec h6 {
+    margin: 20px auto;
+    width: max-content;
+    font-size: 20px;
+    border-top: #E1B168 1px solid;
+    border-bottom: #E1B168 1px solid;
+}
+
+.chefss {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: max-content;
+}
+
+.chefss section {
+    text-align: center;
+    width: 30%;
+    height: 600px;
+    margin-top: 40px;
+
+
+}
+
+.chefss .imgg1 {
+    background-image: url('../images/aboutGirl.png');
+
+}
+
+.chefss .imgg2 {
+    background-image: url('../images/aboutman1.png');
+
+}
+
+.chefss .imgg3 {
+    background-image: url('../images/aboutman2.png');
+
+}
+
+.chefss .imgg4 {
+    background-image: url('../images//aboutman3.png');
+
+}
+
+.chefss .imgg5 {
+    background-image: url('../images/chef5.jpg');
+
+}
+
+.chefss .imgg6 {
+    background-image: url('../images/chef6.jpg');
+
+}
+
+.chefss .chefInfo {
+    background-color:#021016;
+    opacity: 0.8;
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    bottom: 0px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    padding: 10px 20%;
+    font-size: 30px;
+    box-sizing: border-box;
+}
+.chefss .chefInfo p{
+    color: white;
+    font-weight: bold;
+}
+.chefss .chefInfo p:hover {
+    font-size: 33px;
+    font-weight: 100;
+
+}
+
+.chefss section span {
+    height: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    position: relative;
+}
+
+.chefss section h5 {
+    margin: 20px;
+    font-size: 28px;
+}
+
+.chefss section p:not(.chefInfo p) {
+    font-size: 21px;
+}
+
+@media (max-width:1200px) {
+
+    .chefss {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: max-content;
+    }
+
+    .chefss section {
+        width: 80%;
+        margin: auto;
+    }
+
+}
+
+/* second --------------------- */
+.skiiledTeam {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    gap: 50px;
+    padding: 50px;
+    height: max-content;
+}
+
+.skiiledTeam .skilledOne h3 {
+    margin-top: 40px;
+}
+
+.skiiledTeam .skilledOne h6 {
+    width: max-content;
+    font-size: 20px;
+    border-top: #E1B168 1px solid;
+    border-bottom: #E1B168 1px solid;
+}
+/* .skiiledTeam .skilledOne{
+    border: 1px solid black;
+} */
+
+
+.skiiledTeam .skilledTwo {
+    background-image: url('../images/skiiledImge.png');
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
+
+.skilledButton {
+    border: #E1B168 1px solid;
+    color: #E1B168;
+    background-color: white;
+    width: 232px;
+    height: 62px;
+    transition: 1s;
+    font-size: 20px;
+    margin-top: 70px;
+    display: block;
+}
+
+.skilledButton:hover {
+    background-color: #E1B168;
+    color: white;
+}
+
+@media (max-width:1400px) {
+    .skiiledTeam {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .skiiledTeam .skilledOne,
+    .skilledTwo {
+        margin:100px auto;
+    }
+    
+
+}

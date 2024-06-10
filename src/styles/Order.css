@@ -1,0 +1,380 @@
+.order {
+    padding-top: 50px;
+    background-color: #d5e3e6;
+    width: 60%;
+    height: 71vh;
+    position: relative;
+    margin: 80px auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+
+}
+
+.order .orderImg {
+    width: 450px;
+    height: 470px;
+    z-index: 1;
+    position: absolute;
+    top: 24px;
+    right: 0px;
+
+
+}
+
+.order .pre {
+    margin-top: 20px;
+    width: fit-content;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.order .pattern {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    /* z-index: -1; */
+
+}
+
+.order div:first-child {
+    width: 50%;
+    margin-left: 70px;
+
+}
+
+.order .storeimages {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.order .storeimages img {
+    width: 200px;
+    height: 50px;
+}
+
+.appScreens img {
+
+    border-radius: 50px;
+}
+
+.mobile {
+    margin-top: 140px;
+    background-color: #0F3C4F;
+}
+
+.Apps img {
+    width: 370px;
+    height: 120px;
+    border: 1px solid rgb(199, 199, 199);
+    padding: 20px 40px;
+    border-radius: 15px;
+}
+
+.Apps img:hover {
+    background-color: #E1B168;
+}
+
+.appScreens div {
+    text-align: center;
+
+    margin-top: 20px;
+}
+
+.order-content h5 {
+    width: fit-content;
+    margin: auto;
+    border-top: 1px solid #E1B168;
+    border-bottom: 1px solid #E1B168;
+}
+
+.order-via-Apps .button {
+    margin: 40px auto;
+    width: 250px;
+    text-align: center;
+}
+
+.order-via-Apps .button button {
+    width: 100%;
+    height: 100%;
+    padding: 23px 40px;
+    border: 1px solid #E1B168;
+    color: #E1B168;
+    background-color: white;
+    font-size: 21px;
+}
+
+.order-via-Apps .button button:hover {
+    background-color: #E1B168;
+    color: white;
+}
+.mobile .appScreens{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+/* ******************************prices */
+
+.parent-food-price-sec {
+    background-color: #0F3C4F;
+    height: max-content;
+    padding: 50px 0px;
+}
+
+.parent-prices {
+    font-family: Cormorant Infant;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: max-content;
+    padding: 30px;
+    margin-top: 50px;
+    width: 80%;
+    margin: auto;
+
+}
+
+.parent-prices .imagee1 {
+    height: 80%;
+    width: 100%;
+}
+
+.parent-prices div {
+    background-color: #154C639E;
+    height: max-content;
+    width: 26%;
+    box-shadow: #316a82 1px 2px 30px;
+
+}
+
+
+
+
+.parent-prices img:not(.stars) {
+    width: 100%;
+}
+
+.parent-prices span {
+    text-align: left;
+    margin: 30px;
+    display: block;
+}
+
+.parent-prices span del {
+    color: gray;
+    margin-right: 3px;
+}
+
+.food-price h5 {
+    width: fit-content;
+    margin: auto;
+    border-top: 1px solid #E1B168;
+    border-bottom: 1px solid #E1B168;
+}
+
+.parent-food-price-sec .btn-sales {
+    height: 70px;
+    margin: 40px auto;
+    width: 200px;
+    text-align: center;
+
+}
+
+.parent-food-price-sec .btn-sales button {
+    transition: 1s;
+    width: 100%;
+    height: 100%;
+    padding: 23px 35px;
+    border: 1px solid #E1B168;
+    color: #E1B168;
+    background-color: transparent;
+    font-size: 21px;
+
+}
+
+.parent-food-price-sec .btn-sales button:hover {
+    background-color: #E1B168;
+    color: white;
+}
+
+/*******************desrts****************/
+
+.all-prices {
+    text-align: center;
+
+
+}
+
+.parent-deserts {
+    transition: all 4s;
+
+}
+
+.parent-prices {
+    padding-bottom: 40px;
+}
+
+.all-prices div {
+    transition: 1s;
+    width: 25%;
+    box-shadow: gray 1px 1px 20px;
+
+}
+
+.all-prices div:hover {
+    transform: scale(1, 1.1);
+
+}
+
+.all-prices img:not(.stars) {
+    width: 100%;
+}
+
+.all-prices span:not(.stars-divv) {
+    text-align: left;
+    margin: 30px;
+    display: block;
+}
+
+.all-prices span del {
+    color: gray;
+    margin-right: 3px;
+}
+
+.desert-price h5 {
+    width: fit-content;
+    margin: auto;
+    border-top: 1px solid #E1B168;
+    border-bottom: 1px solid #E1B168;
+}
+
+.parent-deserts .btn-sales {
+    height: 60px;
+    margin: 40px auto;
+    width: 200px;
+    text-align: center;
+
+}
+
+/* .btn-sales .button{
+    text-transform: upercase;
+
+} */
+.btn-sales button {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #E1B168;
+    color: #E1B168;
+    background-color: transparent;
+    font-size: 21px;
+    /* z-index: 1;
+    overflow: hidden;
+    transition: allall 0.3s;
+    position: relative;
+    text-transform: upercase; */
+
+}
+
+.btn-sales button:hover {
+    background-color: #E1B168;
+    color: white;
+}
+
+/* .btn-sales button::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: aquamarine;
+    transition: 0.3s ease  all;
+    transform: scale(0,1);
+    transform-origin: bottom left;
+    transition: transform 500ms
+    cubic-bezier(0.86,0,0.07,1);
+    transition-timing-function: 
+    cubic-bezier(0.86,0,0.07,1);
+    
+}
+.btn-sales button:hover::after{
+    transform: scale(1,2);
+    transform-origin: top left;
+    color: #0F3C4F;
+} */
+
+.stars :nth-child(n) {
+    color: #E1B168;
+}
+
+
+.oeganize-stars {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* media */
+
+
+@media (max-width:1100px) {
+    .all-prices {
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+    .all-prices div {
+        width: 60%;
+        margin: auto;
+    }
+}
+
+
+@media (max-width:1300px) {
+    .order-first-div {
+        display: none;
+
+    }
+
+
+}
+
+@media (max-width:1300px) {
+    .parent-prices {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .parent-prices div {
+        width: 60%;
+        margin: auto;
+    }
+}
+
+/* @media(max-width:1500px) {
+    .appScreens {
+        background-color: #E1B168;
+        display: flex;
+        flex-direction: column;
+    }
+} */
+
+
+/* @media (max-width:1400px) {
+    .all-prices {
+       display: flex;
+       flex-wrap: wrap;
+       flex-direction: column;
+       height: max-content;
+
+       
+    }
+    .all-prices div{
+        width: 40%;
+        height: fit-content;
+        border: #0F3C4F 1px solid;
+        margin: auto;
+    }
+} */
