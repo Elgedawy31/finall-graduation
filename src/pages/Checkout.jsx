@@ -45,9 +45,7 @@ function Checkout() {
   }, [orders]);
 
   const makePaymnet = async () => {
-    const stripe = await loadStripe(
-      "pk_test_51NE9ReJO7nATFrqGPyPvqDwyU5w10sG1ZW4vijkPaSf92Dc8xMNzhZm2lxfHchgTVmkIdkqio0iNU4oiHhvG6Tww00Ojmt6Qe0"
-    );
+    const stripe = await loadStripe("pk_test_51NE9ReJO7nATFrqGPyPvqDwyU5w10sG1ZW4vijkPaSf92Dc8xMNzhZm2lxfHchgTVmkIdkqio0iNU4oiHhvG6Tww00Ojmt6Qe0");
     const body = {
       products: orders,
     };
@@ -55,7 +53,7 @@ function Checkout() {
       "Content-Type": "application/json",
     };
 
-    const response = await fetch(`${APP_URL}/checkout`, {
+    const response = await fetch(`${APP_URL}/orders/checkout`, {
       method: "POST",
       body: JSON.stringify(body),
       headers,
