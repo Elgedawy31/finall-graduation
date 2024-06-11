@@ -55,7 +55,7 @@ const Blogsingle = () => {
             </div>
 
             <div className="div">
-              <img src={result?.img} className="img " />
+              <img src={result?.img} className="img " style={{height:'60vh' , objectFit:'cover'}}/>
               <div
                 dangerouslySetInnerHTML={{ __html: result?.description }}
               ></div>

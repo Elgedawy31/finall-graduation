@@ -1,3 +1,4 @@
+import { MdDeleteOutline } from "react-icons/md";
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -45,7 +46,9 @@ function Checkout() {
   }, [orders]);
 
   const makePaymnet = async () => {
-    const stripe = await loadStripe("pk_test_51NE9ReJO7nATFrqGPyPvqDwyU5w10sG1ZW4vijkPaSf92Dc8xMNzhZm2lxfHchgTVmkIdkqio0iNU4oiHhvG6Tww00Ojmt6Qe0");
+    const stripe = await loadStripe(
+      "pk_test_51NE9ReJO7nATFrqGPyPvqDwyU5w10sG1ZW4vijkPaSf92Dc8xMNzhZm2lxfHchgTVmkIdkqio0iNU4oiHhvG6Tww00Ojmt6Qe0"
+    );
     const body = {
       products: orders,
     };
@@ -64,6 +67,24 @@ function Checkout() {
     const result = await stripe.redirectToCheckout({
       sessionId: sesstion?.id,
     });
+  };
+
+  const deleteItem = async (id) => {
+    try {
+      setLoading(true);
+      const getData = async () => {
+        const res = await axios.delete(`${APP_URL}/orders/${id}`);
+        if (res.data) {
+          const newData = orders?.filter((ele) => ele?._id !== id);
+          setOrders(newData);
+          setLoading(false);
+        }
+      };
+      getData();
+    } catch (error) {
+      setLoading(false);
+      console.log(error);
+    }
   };
 
   return (
@@ -87,7 +108,18 @@ function Checkout() {
                       src={ele?.productID?.imageUrl}
                       alt=""
                     />
-                    <div className="d-flex flex-column gap-3 ">
+                    <div className="d-flex flex-column gap-3 position-relative ">
+                      <MdDeleteOutline
+                        color="red"
+                        size={28}
+                        onClick={() => deleteItem(ele?._id)}
+                        className="position-absolute "
+                        style={{
+                          bottom: "1rem",
+                          right: "1rem",
+                          cursor: "pointer",
+                        }}
+                      />
                       <h1 style={{ color: "#0F3C4F" }}>
                         {ele?.productID?.title}
                       </h1>
