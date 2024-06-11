@@ -24,16 +24,18 @@ const Ourchefs = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-      setLoading(true);
+    setLoading(true);
     try {
       const getData = async () => {
         const res = await axios.get(`${APP_URL}/chef`);
-        setcheefs(res.data);
+        if (res.data) {
+          setcheefs(res.data);
+          setLoading(false);
+        }
       };
       getData();
     } catch (error) {
       console.log(error);
-    } finally {
       setLoading(false);
     }
   }, []);
@@ -45,7 +47,7 @@ const Ourchefs = () => {
   const [showIcon5, setShowIcon5] = useState(false);
   const [showIcon6, setShowIcon6] = useState(false);
 
-  console.log(cheefs);
+  console.log(cheefs[0]?.avatar);
 
   return (
     <div>
@@ -68,218 +70,71 @@ const Ourchefs = () => {
               <h3>Meet Our Professional Chefs</h3>
             </div>
             <section className="chefss">
-              <section
-                onMouseEnter={() => setShowIcons(true)}
-                onMouseLeave={() => setShowIcons(false)}
-              >
-                <span className="imgg1">
-                  {showIcons && (
-                    <div>
-                      {
-                        <div className="chefInfo  ">
-                          <p>
-                            {" "}
-                            <FaInstagram />
-                          </p>
-                          <p>
-                            {" "}
-                            <FaFacebook />
-                          </p>
-                          <p>
-                            {" "}
-                            <CiTwitter />
-                          </p>
-                          <p>
-                            {" "}
-                            <FaPinterest />
-                          </p>
-                        </div>
-                      }
-                    </div>
-                  )}
-                </span>
-                <h5>Arrvaco</h5>
-                <p>master cheif</p>
-              </section>
-
-              <section
-                onMouseEnter={() => setShowIcon2(true)}
-                onMouseLeave={() => setShowIcon2(false)}
-              >
-                <span className="imgg2">
-                  {showIcon2 && (
-                    <div>
-                      {
-                        <div className="chefInfo  ">
-                          <Link to="/ChefSingle">
-                            <p>
-                              <FaInstagram />
-                            </p>
-                          </Link>
-                          <Link to="/ChefSingle">
-                            <p>
-                              <FaFacebook />
-                            </p>
-                          </Link>
-                          <Link to="/ChefSingle">
-                            <p>
-                              <CiTwitter />
-                            </p>
-                          </Link>
-                          <Link to="/ChefSingle">
-                            <p>
-                              <FaPinterest />
-                            </p>
-                          </Link>
-                        </div>
-                      }
-                    </div>
-                  )}
-                </span>
-
-                <h5>Arrvaco</h5>
-                <p>master cheif</p>
-              </section>
-
-              <section
-                onMouseEnter={() => setShowIcon3(true)}
-                onMouseLeave={() => setShowIcon3(false)}
-              >
-                <span className="imgg3">
-                  {showIcon3 && (
-                    <div>
-                      {
-                        <div className="chefInfo  ">
-                          <p>
-                            {" "}
-                            <FaInstagram />
-                          </p>
-                          <p>
-                            {" "}
-                            <FaFacebook />
-                          </p>
-                          <p>
-                            {" "}
-                            <CiTwitter />
-                          </p>
-                          <p>
-                            {" "}
-                            <FaPinterest />
-                          </p>
-                        </div>
-                      }
-                    </div>
-                  )}
-                </span>
-
-                <h5>Arrvaco</h5>
-                <p>master cheif</p>
-              </section>
-
-              <section
-                onMouseEnter={() => setShowIcon4(true)}
-                onMouseLeave={() => setShowIcon4(false)}
-              >
-                <span className="imgg4">
-                  {showIcon4 && (
-                    <div>
-                      {
-                        <div className="chefInfo  ">
-                          <p>
-                            {" "}
-                            <FaInstagram />
-                          </p>
-                          <p>
-                            {" "}
-                            <FaFacebook />
-                          </p>
-                          <p>
-                            {" "}
-                            <CiTwitter />
-                          </p>
-                          <p>
-                            {" "}
-                            <FaPinterest />
-                          </p>
-                        </div>
-                      }
-                    </div>
-                  )}
-                </span>
-
-                <h5>Arrvaco</h5>
-                <p>master cheif</p>
-              </section>
-
-              <section
-                onMouseEnter={() => setShowIcon5(true)}
-                onMouseLeave={() => setShowIcon5(false)}
-              >
-                <span className="imgg5">
-                  {showIcon5 && (
-                    <div>
-                      {
-                        <div className="chefInfo  ">
-                          <p>
-                            {" "}
-                            <FaInstagram />
-                          </p>
-                          <p>
-                            {" "}
-                            <FaFacebook />
-                          </p>
-                          <p>
-                            {" "}
-                            <CiTwitter />
-                          </p>
-                          <p>
-                            {" "}
-                            <FaPinterest />
-                          </p>
-                        </div>
-                      }
-                    </div>
-                  )}
-                </span>
-
-                <h5>Arrvaco</h5>
-                <p>master cheif</p>
-              </section>
-
-              <section
-                onMouseEnter={() => setShowIcon6(true)}
-                onMouseLeave={() => setShowIcon6(false)}
-              >
-                <span className="imgg6">
-                  {showIcon6 && (
-                    <div>
-                      {
-                        <div className="chefInfo  ">
-                          <p>
-                            {" "}
-                            <FaInstagram />
-                          </p>
-                          <p>
-                            {" "}
-                            <FaFacebook />
-                          </p>
-                          <p>
-                            {" "}
-                            <CiTwitter />
-                          </p>
-                          <p>
-                            {" "}
-                            <FaPinterest />
-                          </p>
-                        </div>
-                      }
-                    </div>
-                  )}
-                </span>
-
-                <h5>Arrvaco</h5>
-                <p>master cheif</p>
-              </section>
+              {cheefs?.map((ele) => (
+                <section
+                  onMouseEnter={() => setShowIcons(true)}
+                  onMouseLeave={() => setShowIcons(false)}
+                >
+                  <span
+                    className="imgg1"
+                    style={{ backgroundImage: `url(${ele?.avatar})` }}
+                  >
+                    {showIcons && (
+                      <div>
+                        {
+                          <div className="chefInfo  ">
+                            {ele?.links?.map((ele) => (
+                              <>
+                                {ele?.instagram && (
+                                  <>
+                                    <p>
+                                      <a
+                                        className="text-white"
+                                        href={`https://instagram.com//${ele?.instagram}`}
+                                      >
+                                        {" "}
+                                        <FaInstagram />
+                                      </a>
+                                    </p>
+                                  </>
+                                )}
+                                {ele?.facebook && (
+                                  <>
+                                    <p>
+                                      <a
+                                        className="text-white"
+                                        href={`https://facebook.com//${ele?.facebook}`}
+                                      >
+                                        {" "}
+                                        <FaFacebook />
+                                      </a>
+                                    </p>
+                                  </>
+                                )}
+                                {ele?.twitter && (
+                                  <>
+                                    <p>
+                                      <a
+                                        className="text-white"
+                                        href={`https://Twitter.com//${ele?.twitter}`}
+                                      >
+                                        {" "}
+                                        <CiTwitter />
+                                      </a>
+                                    </p>
+                                  </>
+                                )}
+                              </>
+                            ))}
+                          </div>
+                        }
+                      </div>
+                    )}
+                  </span>
+                  <h5>{ele?.name}</h5>
+                  <p>{ele?.type}</p>
+                </section>
+              ))}
             </section>
           </Container>
           {/* second */}

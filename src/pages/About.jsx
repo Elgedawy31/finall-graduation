@@ -14,7 +14,9 @@ import Table from '../components/Table'
 import { Container } from 'react-bootstrap'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import { useNavigate } from 'react-router-dom'
 const About = () => {
+    const navigation = useNavigate()
     return (
 
         <div>
@@ -67,7 +69,7 @@ const About = () => {
                     <h3>Fresh Products</h3>
                     <p>Professional consider everyone
                         probls small niche friendly.</p>
-                    <button>See more</button>
+                    <button onClick={() => navigation('/order')}>See more</button>
 
                 </div>
 
@@ -76,7 +78,7 @@ const About = () => {
                     <h3>Fresh Products</h3>
                     <p>Professional consider everyone
                         probls small niche friendly.</p>
-                    <button>See more</button>
+                    <button onClick={() => navigation('/order')}>See more</button>
                 </div>
 
                 <div>
@@ -84,14 +86,14 @@ const About = () => {
                     <h3>Fresh Products</h3>
                     <p>Professional consider everyone
                         probls small niche friendly.</p>
-                    <button>See more</button>
+                    <button onClick={() => navigation('/order')}>See more</button>
                 </div>
                 <div className='notBorder'>
                     <img src={icone4} />
                     <h3>Fresh Products</h3>
                     <p>Professional consider everyone
                         probls small niche friendly.</p>
-                    <button>See more</button>
+                    <button onClick={() => navigation('/order')}>See more</button>
 
                 </div>
             </section>
