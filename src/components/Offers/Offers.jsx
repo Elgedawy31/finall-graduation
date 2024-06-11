@@ -162,13 +162,13 @@ function Offers({ products }) {
 
         <div className=" mt-5 gap-3 container">
           <div className=" all-prices pt-4 fw-bold   pb-5 m-auto w-100 d-flex justify-content-evenly">
-            {products?.slice(0, 4).map((ele) => (
+            {products?.slice(3, 6).map((ele) => (
               <div
                 className="col-lg-4  mt-5 col-sm-12 "
                 onClick={() => navigation("/new-order", { state: ele })}
                 style={{ cursor: "pointer" }}
               >
-                <img src={ele?.imageUrl} />
+                <img src={ele?.imageUrl} style={{width:'324px' , height:'324px', objectFit:'cover'}} />
                 <span>
                   <h4>{ele?.title}</h4>
                   <section className="oeganize-stars d-flex">
@@ -219,13 +219,17 @@ function Offers({ products }) {
 
         <div className=" mt-5 gap-3 container">
           <div className="w-100 row ">
-            {blog?.slice(0, 3).map((ele) => (
+            {blog?.slice(0, 4).map((ele) => (
               <div
                 className="col-lg-6  mb-5"
                 onClick={() => navigation(`/blog/${ele?._id}`, { state: ele })}
                 style={{ cursor: "pointer" }}
               >
-                <img src={ele?.img} className="w-100" />
+                <img
+                  src={ele?.img}
+                  style={{ height: "400px", objectFit: "cover" }}
+                  className="w-100"
+                />
                 <div className="d-flex gap-3">
                   <h6
                     className="mb-2 mt-3 "

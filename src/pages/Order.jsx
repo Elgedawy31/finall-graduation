@@ -37,13 +37,15 @@ export const Order = () => {
       setLoading(true);
       const getData = async () => {
         const res = await axios.get(`${APP_URL}/products`);
-        setProducts(res.data);
+        if (res.data) {
+          setProducts(res.data);
+          setLoading(false);
+        }
       };
       getData();
     } catch (error) {
-      console.log(error);
-    } finally {
       setLoading(false);
+      console.log(error);
     }
   }, []);
 
@@ -150,13 +152,21 @@ export const Order = () => {
             </section>
 
             <section className="parent-prices pt-5 bp-5 mb-5">
-              {products?.slice(0, 4).map((ele) => (
+              {products?.slice(0, 3).map((ele) => (
                 <div
                   className="  mt-5 cursor-pointer "
                   style={{ cursor: "pointer" }}
                   onClick={() => navigation("/new-order", { state: ele })}
                 >
-                  <img src={ele?.imageUrl} className="imagee1" />
+                  <img
+                    src={ele?.imageUrl}
+                    className="imagee1"
+                    style={{
+                      width: "100%",
+                      height: "324px",
+                      objectFit: "cover",
+                    }}
+                  />
                   <span>
                     <h4 style={{ color: "white" }}>{ele?.title}</h4>
                     <img src={line} />
@@ -194,13 +204,20 @@ export const Order = () => {
             </div>
 
             <div className=" all-prices pt-4 fw-bold   pb-5 m-auto w-100 d-flex justify-content-evenly">
-              {products?.slice(0, 4).map((ele) => (
+              {products?.slice(3, 6).map((ele) => (
                 <div
                   className="col-lg-4  mt-5 col-sm-12 "
                   onClick={() => navigation("/new-order", { state: ele })}
                   style={{ cursor: "pointer" }}
                 >
-                  <img src={ele?.imageUrl} />
+                  <img
+                    src={ele?.imageUrl}
+                    style={{
+                      width: "100%",
+                      height: "324px",
+                      objectFit: "cover",
+                    }}
+                  />
                   <span>
                     <h4>{ele?.title}</h4>
                     <img src={line} />

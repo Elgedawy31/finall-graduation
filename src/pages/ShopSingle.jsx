@@ -40,12 +40,14 @@ const ShopSingle = () => {
         const res = await axios.get(
           `${APP_URL}/products?type=${location?.state?.type}`
         );
-        setProducts(res.data);
+        if (res.data) {
+          setProducts(res.data);
+          setLoading(false);
+        }
       };
       getData();
     } catch (error) {
       console.log(error);
-    } finally {
       setLoading(false);
     }
   }, []);
@@ -59,10 +61,7 @@ const ShopSingle = () => {
       total: product?.price * quantity,
       subTotal: product?.price * 0.8 * quantity,
     };
-    const res = await axios.post(
-      `${APP_URL}/orders/${product?._id}`,
-      data
-    );
+    const res = await axios.post(`${APP_URL}/orders/${product?._id}`, data);
 
     if (res?.data) {
       setSent(true);
@@ -95,6 +94,7 @@ const ShopSingle = () => {
             <div className="grid_sec_shop d-flex gap-5">
               <div style={{ flex: 1 }}>
                 <img
+                  style={{ height: "70vh", objectFit: "cover" }}
                   className="food_photo_shop"
                   src={location.state?.imageUrl}
                   alt="food"
@@ -103,7 +103,7 @@ const ShopSingle = () => {
               <div className="shop_desc" style={{ flex: 1 }}>
                 <label className="shop_name">{product?.title}</label>
                 <img className="white_star_shop" src={white_star} alt="line" />
-             
+
                 <span className="order_price mt-1">
                   ${product?.price?.toFixed(2)}
                 </span>
@@ -160,7 +160,7 @@ const ShopSingle = () => {
                   onClick={() => setProduct(ele)}
                   style={{ cursor: "pointer" }}
                 >
-                  <img src={ele?.imageUrl} />
+                  <img src={ele?.imageUrl} style={{height:'324px'}} />
                   <span>
                     <h4>{ele?.title}</h4>
                     <img src={line} />

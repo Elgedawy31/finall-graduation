@@ -14,7 +14,7 @@ import skilledimg from "../images/skiiledImge.png";
 import Table from "../components/Table";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { APP_URL } from "../utils/Constants";
 import UniLoading from "../components/loading/Loading";
@@ -22,7 +22,7 @@ import UniLoading from "../components/loading/Loading";
 const Ourchefs = () => {
   const [cheefs, setcheefs] = useState([]);
   const [loading, setLoading] = useState(false);
-
+  const navigation = useNavigate();
   useEffect(() => {
     setLoading(true);
     try {
@@ -39,15 +39,6 @@ const Ourchefs = () => {
       setLoading(false);
     }
   }, []);
-
-  const [showIcons, setShowIcons] = useState(false);
-  const [showIcon2, setShowIcon2] = useState(false);
-  const [showIcon3, setShowIcon3] = useState(false);
-  const [showIcon4, setShowIcon4] = useState(false);
-  const [showIcon5, setShowIcon5] = useState(false);
-  const [showIcon6, setShowIcon6] = useState(false);
-
-  console.log(cheefs[0]?.avatar);
 
   return (
     <div>
@@ -72,64 +63,62 @@ const Ourchefs = () => {
             <section className="chefss">
               {cheefs?.map((ele) => (
                 <section
-                  onMouseEnter={() => setShowIcons(true)}
-                  onMouseLeave={() => setShowIcons(false)}
+                  style={{ cursor: "pointer" }}
+                  onClick={() => navigation(`/cheefs/${ele?._id}`)}
                 >
                   <span
                     className="imgg1"
                     style={{ backgroundImage: `url(${ele?.avatar})` }}
                   >
-                    {showIcons && (
-                      <div>
-                        {
-                          <div className="chefInfo  ">
-                            {ele?.links?.map((ele) => (
-                              <>
-                                {ele?.instagram && (
-                                  <>
-                                    <p>
-                                      <a
-                                        className="text-white"
-                                        href={`https://instagram.com//${ele?.instagram}`}
-                                      >
-                                        {" "}
-                                        <FaInstagram />
-                                      </a>
-                                    </p>
-                                  </>
-                                )}
-                                {ele?.facebook && (
-                                  <>
-                                    <p>
-                                      <a
-                                        className="text-white"
-                                        href={`https://facebook.com//${ele?.facebook}`}
-                                      >
-                                        {" "}
-                                        <FaFacebook />
-                                      </a>
-                                    </p>
-                                  </>
-                                )}
-                                {ele?.twitter && (
-                                  <>
-                                    <p>
-                                      <a
-                                        className="text-white"
-                                        href={`https://Twitter.com//${ele?.twitter}`}
-                                      >
-                                        {" "}
-                                        <CiTwitter />
-                                      </a>
-                                    </p>
-                                  </>
-                                )}
-                              </>
-                            ))}
-                          </div>
-                        }
-                      </div>
-                    )}
+                    <div>
+                      {
+                        <div className="chefInfo  ">
+                          {ele?.links?.map((ele) => (
+                            <>
+                              {ele?.instagram && (
+                                <>
+                                  <p>
+                                    <a
+                                      className="text-white"
+                                      href={`https://instagram.com//${ele?.instagram}`}
+                                    >
+                                      {" "}
+                                      <FaInstagram />
+                                    </a>
+                                  </p>
+                                </>
+                              )}
+                              {ele?.facebook && (
+                                <>
+                                  <p>
+                                    <a
+                                      className="text-white"
+                                      href={`https://facebook.com//${ele?.facebook}`}
+                                    >
+                                      {" "}
+                                      <FaFacebook />
+                                    </a>
+                                  </p>
+                                </>
+                              )}
+                              {ele?.twitter && (
+                                <>
+                                  <p>
+                                    <a
+                                      className="text-white"
+                                      href={`https://Twitter.com//${ele?.twitter}`}
+                                    >
+                                      {" "}
+                                      <CiTwitter />
+                                    </a>
+                                  </p>
+                                </>
+                              )}
+                            </>
+                          ))}
+                        </div>
+                      }
+                    </div>
                   </span>
                   <h5>{ele?.name}</h5>
                   <p>{ele?.type}</p>

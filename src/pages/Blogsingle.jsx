@@ -19,13 +19,15 @@ const Blogsingle = () => {
       setLoading(true);
       const getData = async () => {
         const res = await axios.get(`${APP_URL}/blog/${id}`);
-        setResult(res.data);
+        if (res.data) {
+          setResult(res.data);
+          setLoading(false)
+        }
       };
       getData();
     } catch (error) {
       console.log(error);
-    } finally {
-        setLoading(false);
+      setLoading(false);
     }
   }, []);
 
@@ -54,7 +56,9 @@ const Blogsingle = () => {
 
             <div className="div">
               <img src={result?.img} className="img " />
-         <div dangerouslySetInnerHTML={{__html:result?.description}}></div>
+              <div
+                dangerouslySetInnerHTML={{ __html: result?.description }}
+              ></div>
             </div>
           </Container>
           <Footer />

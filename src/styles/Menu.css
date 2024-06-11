@@ -47,5 +47,5 @@
 .menuground1,
 .menuground2{
     height: 300px;
-    width: 100vw; 
+    width: 100%; 
 }

@@ -91,13 +91,15 @@ const Blog = () => {
       setLoading(true);
       const getData = async () => {
         const res = await axios.get(`${APP_URL}/blog`);
-        setResult(res.data);
+        if (res.data) {
+          setResult(res.data);
+          setLoading(false);
+        }
       };
       getData();
     } catch (error) {
-      console.log(error);
-    } finally {
       setLoading(false);
+      console.log(error);
     }
   }, []);
 
