@@ -7,7 +7,6 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaPinterest } from "react-icons/fa";
-// import blogSubTitle from '../images/blog-sub-title.png'
 
 const Header = () => {
   const navigation = useNavigate();
@@ -30,7 +29,7 @@ const Header = () => {
             <img src={footerLogo} alt="" />
           </div>
           <div className="col-lg-4 col-sm-12 mt-5">
-            <IoCartOutline className="cart text-light" />{" "}
+            <IoCartOutline style={{cursor:'pointer' }} onClick={() => navigation('/checkout')} className="cart text-light" />{" "}
             <button
               className="reservation-button  ms-5"
               onClick={() => navigation("/booking")}
